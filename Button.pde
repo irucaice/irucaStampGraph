@@ -2,15 +2,15 @@ class Button {
   int posX;
   int posY;
   String text;
-  int boxWidth;
-  int boxHeight;
+  int boxWidth = 100;
+  int boxHeight = 40;
 
   Button(int _posX, int _posY, String _text) {
     posX = _posX;
     posY = _posY;
     text = _text;
-    boxWidth =100;
-    boxHeight = 40;
+    //boxWidth = 100;
+    //boxHeight = 40;
   }
 
   void draw() {
@@ -20,6 +20,8 @@ class Button {
     }
     stroke(0);
     rect(posX, posY, boxWidth, boxHeight);
+    //println("bX="+boxWidth+"bY="+boxHeight);//***
+    //println("mX="+mouseX+"mY="+mouseY+"pX="+posX+"pY="+posY);//***
     textSize(30);
     fill(0);
     text(text, posX+18, posY+30);
